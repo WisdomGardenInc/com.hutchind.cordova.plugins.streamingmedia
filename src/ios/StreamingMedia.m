@@ -233,6 +233,7 @@ NSString *const PARAMS_OPTIONS = @"options";
     playerViewController.isDefinitionSource = isDefinition;
     playerViewController.mediaTitle = title;
     playerViewController.delegate = self;
+    playerViewController.modalPresentationStyle = 0;
     [self.viewController presentViewController:playerViewController animated:NO completion:^{
     }];
     //[self setOrientation];
