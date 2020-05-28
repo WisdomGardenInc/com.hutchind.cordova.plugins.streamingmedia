@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+		xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		id="com.hutchind.cordova.plugins.streamingmedia"
+		version="0.1.4">
+
+	<name>StreamingMedia</name>
+
+	<description>
+		This plugin allows you to launch a fullscreen streaming player for audio or video on iOS.
+	</description>
+
+	<author>Nicholas Hutchind (Modified by Lu Di)</author>
+
+	<license>MIT</license>
+
+	<keywords>Streaming, Media, Video, Audio, iOS</keywords>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+	<js-module src="www/StreamingMedia.js" name="StreamingMedia">
+		<clobbers target="streamingMedia" />
+	</js-module>
+
+	<!-- ios -->
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="StreamingMedia">
+				<param name="ios-package" value="StreamingMedia" />
+			</feature>
+		</config-file>
+		<header-file src="src/ios/UIView+Toast.h" />
+		<source-file src="src/ios/UIView+Toast.m" />
+		<header-file src="src/ios/StreamingMedia.h" />
+		<source-file src="src/ios/StreamingMedia.m" />
+        <header-file src="src/ios/CustomPlayerView.h" />
+        <source-file src="src/ios/CustomPlayerView.m" />
+        <header-file src="src/ios/CustomMediaPlayerViewController.h" />
+        <source-file src="src/ios/CustomMediaPlayerViewController.m" />
+        <resource-file src="src/ios/CustomMediaPlayerViewController.xib"/>
+        <resource-file src="src/ios/StreamingMediaSource/ic_back@2x.png"/>
+        <resource-file src="src/ios/StreamingMediaSource/ic_play@2x.png"/>
+        <resource-file src="src/ios/StreamingMediaSource/ic_source@2x.png"/>
+        <resource-file src="src/ios/StreamingMediaSource/ic_source_selected@2x.png"/>
+        <resource-file src="src/ios/StreamingMediaSource/ic_pause@2x.png"/>
+				<resource-file src="src/ios/StreamingMediaSource/ic_progress_button@2x.png"/>
+				<resource-file src="src/ios/StreamingMediaSource/ic_retreat@2x.png"/>
+				<resource-file src="src/ios/StreamingMediaSource/ic_speed@2x.png"/>
+		<framework src="MediaPlayer.framework" />
+	</platform>
+</plugin>
