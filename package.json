@@ -1,15 +1,8 @@
 {
   "name": "com.hutchind.cordova.plugins.streamingmedia",
   "version": "1.0.0",
-  "description": "Cordova Plugin",
-  "cordova": {
-    "id": "com.hutchind.cordova.plugins.streamingmedia",
-    "platforms": [
-      "ios",
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WisdomGardenInc/com.hutchind.cordova.plugins.streamingmedia.git"
-  }
+  "main": "index.js",
+  "repository": "git@github.com:WisdomGardenInc/com.hutchind.cordova.plugins.streamingmedia.git",
+  "author": "Lu Di <ludi@wisdomgarden.com>",
+  "license": "MIT"
 }
